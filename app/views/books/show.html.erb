@@ -1,0 +1,20 @@
+<% if flash[:notice] %>
+  <p><%= flash[:notice] %></p>
+<% end %>
+
+<% if flash[:update] %>
+  <p><%= flash[:update] %></p>
+<% end %>
+
+<p>
+  <strong>タイトル：</strong>
+  <%= @book.title %>
+</p>
+
+<p>
+  <strong>内容：</strong>
+  <%= @book.body %>
+</p>
+
+<%= link_to 'Back', books_path %>
+| <%= link_to 'Edit', edit_book_path(@book) %>
